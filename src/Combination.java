@@ -1,11 +1,7 @@
-import java.awt.color.ICC_ColorSpace;
-import java.util.Arrays;
-import java.util.List;
 import java.util.NoSuchElementException;
 
 public class Combination {
     private boolean[] combination;
-    private boolean nextExists = true;
 
     public Combination(int n) {
         combination = new boolean[n];
@@ -25,15 +21,6 @@ public class Combination {
 
     public boolean hasNext() {
         return combination != null;
-    }
-
-    @Override
-    public String toString() {
-        String intString = "";
-        for (boolean choice : combination) {
-            intString += choice ? "1" : "0";
-        }
-        return intString;
     }
 
     private void prepareNext() {
